@@ -38,6 +38,10 @@
     "promise": "7.1.1",
     "react-dev-utils": "^0.4.2",
     "recursive-readdir": "2.1.0",
+    "redux-devtools": "3.3.1",
+    "redux-devtools-dock-monitor": "1.1.1",
+    "redux-devtools-log-monitor": "1.0.11",
+    "redux-logger": "2.6.1",
     "strip-ansi": "3.0.1",
     "style-loader": "0.13.1",
     "url-loader": "0.5.7",
@@ -47,8 +51,16 @@
     "whatwg-fetch": "1.0.0"
   },
   "dependencies": {
+    "humps": "1.1.0",
+    "lodash": "4.16.1",
+    "normalizr": "3.0.0",
     "react": "^15.4.2",
-    "react-dom": "^15.4.2"
+    "react-dom": "^15.4.2",
+    "react-redux": "4.4.5",
+    "react-router": "2.6.1",
+    "react-router-redux": "4.0.5",
+    "redux": "3.5.2",
+    "redux-thunk": "2.1.0"
   },
   "scripts": {
     "start": "node scripts/start.js",
