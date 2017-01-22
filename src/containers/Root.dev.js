@@ -8,7 +8,7 @@ const Root = ({ store, history }) => (
   <Provider store={store}>
     <div>
       <Router history={history} routes={routes} />
-      <DevTools />
+      {process.env.NODE_ENV === 'development' && <DevTools />}
     </div>
   </Provider>
 )

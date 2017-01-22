@@ -5,12 +5,18 @@ import api from '../middleware/api'
 import rootReducer from '../reducers'
 import DevTools from '../containers/DevTools'
 
+let middlewares = [thunk, api]
+
+if (process.env.NODE_ENV !== 'test') {
+  middlewares = [...middlewares, createLogger()]
+}
+
 const configureStore = preloadedState => {
   const store = createStore(
     rootReducer,
     preloadedState,
     compose(
-      applyMiddleware(thunk, api, createLogger()),
+      applyMiddleware(...middlewares),
       DevTools.instrument()
     )
   )
