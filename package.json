@@ -8,6 +8,7 @@
     "babel-eslint": "7.1.1",
     "babel-jest": "17.0.2",
     "babel-loader": "6.2.7",
+    "babel-polyfill": "^6.22.0",
     "babel-preset-react-app": "^2.0.1",
     "case-sensitive-paths-webpack-plugin": "1.1.4",
     "chalk": "1.1.3",
@@ -32,15 +33,21 @@
     "gzip-size": "3.0.0",
     "html-webpack-plugin": "2.24.0",
     "http-proxy-middleware": "0.17.2",
+    "jasmine-core": "^2.5.2",
     "jest": "17.0.2",
     "json-loader": "0.5.4",
+    "karma": "1.3.0",
+    "karma-jasmine": "1.1.0",
+    "karma-phantomjs-launcher": "1.0.2",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-webpack": "2.0.1",
     "object-assign": "4.1.0",
     "path-exists": "2.1.0",
     "postcss-loader": "1.0.0",
     "promise": "7.1.1",
     "react-addons-test-utils": "^15.4.1",
     "react-dev-utils": "^0.4.2",
-    "react-page-object": "^1.0.9",
+    "react-page-object": "^1.0.10",
     "recursive-readdir": "2.1.0",
     "redux-devtools": "3.3.1",
     "redux-devtools-dock-monitor": "1.1.1",
@@ -69,7 +76,9 @@
   "scripts": {
     "start": "node scripts/start.js",
     "build": "node scripts/build.js",
-    "test": "node scripts/test.js --env=jsdom"
+    "test": "node scripts/test.js --env=jsdom",
+    "jasmine-tests": "npm run karma-jasmine -- --single-run",
+    "karma-jasmine": "BABEL_ENV=development NODE_ENV=test node_modules/karma/bin/karma start config/karma.conf.jasmine.js"
   },
   "jest": {
     "collectCoverageFrom": [
