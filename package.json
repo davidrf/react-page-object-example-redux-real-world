@@ -11,6 +11,7 @@
     "babel-polyfill": "^6.22.0",
     "babel-preset-react-app": "^2.0.1",
     "case-sensitive-paths-webpack-plugin": "1.1.4",
+    "chai": "3.5.0",
     "chalk": "1.1.3",
     "connect-history-api-fallback": "1.3.0",
     "cross-spawn": "4.0.2",
@@ -37,10 +38,13 @@
     "jest": "17.0.2",
     "json-loader": "0.5.4",
     "karma": "1.3.0",
+    "karma-chai": "0.1.0",
     "karma-jasmine": "1.1.0",
+    "karma-mocha": "1.3.0",
     "karma-phantomjs-launcher": "1.0.2",
     "karma-sourcemap-loader": "0.3.7",
     "karma-webpack": "2.0.1",
+    "mocha": "3.2.0",
     "object-assign": "4.1.0",
     "path-exists": "2.1.0",
     "postcss-loader": "1.0.0",
@@ -78,7 +82,9 @@
     "build": "node scripts/build.js",
     "test": "node scripts/test.js --env=jsdom",
     "jasmine-tests": "npm run karma-jasmine -- --single-run",
-    "karma-jasmine": "BABEL_ENV=development NODE_ENV=test node_modules/karma/bin/karma start config/karma.conf.jasmine.js"
+    "mocha-tests": "npm run karma-mocha -- --single-run",
+    "karma-jasmine": "BABEL_ENV=development NODE_ENV=test node_modules/karma/bin/karma start config/karma.conf.jasmine.js",
+    "karma-mocha": "BABEL_ENV=development NODE_ENV=test node_modules/karma/bin/karma start config/karma.conf.mocha.js"
   },
   "jest": {
     "collectCoverageFrom": [
